@@ -206,18 +206,28 @@ body {
     padding-left: 15px;
     text-decoration: underline;
     margin: 0;
+    line-height: 150%;
 }
 
 .full-info {
     flex: 0.97;
 }
 
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 .tabs-item {
     color: #000000;
     text-decoration: none;
-    margin-right: 40px;
     font-size: 18px;
     line-height: 21px;
+}
+
+.tabs-item:not(:last-child) {
+    margin-right: 40px;
 }
 
 .tabs-item-active {
@@ -231,4 +241,44 @@ body {
 
 .tabs-content {
     margin-right: 70px;
+}
+
+.text {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.subscribe-title {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 14px;
+    margin-top: 0;
+}
+
+.subscribe-input {
+    background: rgba(196, 196, 196, 0.5);
+    border-top-left-radius: 3px; /* Скругление - только левый верхний угол */
+    border-bottom-left-radius: 3px; /* Скругление - только правый верхний угол */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: none; /* Убираем рамку у строки поиска */
+    color: #AEAEAE;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.subscribe-button {
+    background: #FF8F27;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+    padding: 12px;
 }
