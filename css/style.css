@@ -173,12 +173,16 @@ body {
     background-color: #ffffff;
     border-radius: 3px;
     color: #000000; /* Весь текст внутри блока будет этого цвета */
-    padding: 43px 50px;
+    padding: 3% 4%;
+}
+
+.short-info {
+    margin-right: 3%;
 }
 
 .poster {
     display: block; /* сделали блочным элементом, чтобы кнопка стала снизу, а не справа */
-    margin-top: -80px;
+    margin-top: -40%;
     margin-bottom: 20px;
 }
 
@@ -216,7 +220,7 @@ body {
 .tabs {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 4%;
 }
 
 .tabs-item {
@@ -227,7 +231,7 @@ body {
 }
 
 .tabs-item:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 4%;
 }
 
 .tabs-item-active {
@@ -281,4 +285,47 @@ body {
     border-radius: 0px 5px 5px 0px;
     border: none;
     padding: 12px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px; /* вид переключается, если экран меньше 960px */
+    }
+    .tabs-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 740px;
+    }
+    .tabs {
+        flex-wrap: wrap;
+    }
+    .tabs-item {
+        flex-basis: 20%;
+        line-height: 2;
+    }
+    .full-content {
+        flex-wrap: wrap; /* тогда форма подписки и баннер уходят в самый низ */
+    }
+    .tabs-content {
+        margin-bottom: 5%;
+    }
+    .text {
+        font-size: 14px;
+    }    
+}
+
+@media (max-width: 768px) {
+    .container {
+        min-width: 560px;
+    }
+    .more {
+        display: none;
+    }
+    .tabs-item {
+        flex-basis: 350px;
+    }
 }
